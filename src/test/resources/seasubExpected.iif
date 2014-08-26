@@ -1,0 +1,7 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!SPL	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!ENDTRNS
+TRNS	"8/31/2009"	"Paypal"	"seasub person"	"Web Accept Payment Received"	145.35	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"
+SPL	"8/31/2009"	"Season Subscription"	"seasub person"	House	-150.00	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"
+SPL	"8/31/2009"	"Paypal Expense"	"seasub person"	House	4.65	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"
+ENDTRNS

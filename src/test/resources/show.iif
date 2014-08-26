@@ -1,0 +1,7 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO
+!SPL	DATE	ACCNT	NAME	AMOUNT	MEMO
+!ENDTRNS
+TRNS	"10/1/2009"	"Paypal"	"John Person"	"Web Accept Payment Received"	213.32	"11 Musical adult ticket for This is a show on 10/2/2009 - Friday, 8:00PM"	
+SPL	"10/1/2009"	"Other Income"	"John Person"	-220.00
+SPL	"10/1/2009"	"Other Expenses"	Fee	6.68
+ENDTRNS

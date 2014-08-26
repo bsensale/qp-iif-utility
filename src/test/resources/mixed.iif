@@ -1,0 +1,26 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO
+!SPL	DATE	ACCNT	NAME	AMOUNT	MEMO
+!ENDTRNS
+TRNS	"11/30/2009"	"Paypal"	"mixed show"	"Web Accept Payment Received"	38.54	"2 Adult Musical Ticket(s), This is a show - 9/19/2009, Saturday, 8:00PM"	
+SPL	"11/30/2009"	"Other Income"	"mixed show"	-40.00
+SPL	"11/30/2009"	"Other Expenses"	Fee	1.46
+ENDTRNS
+TRNS	"11/19/2009"	"Paypal"	"mixedseasub user"	"Web Accept Payment Received"	291.00	"4 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"	
+SPL	"11/19/2009"	"Other Income"	"mixedseasub user"	-300.00
+SPL	"11/19/2009"	"Other Expenses"	Fee	9.00
+ENDTRNS
+TRNS	"11/30/2009"	"Paypal"	"mixedpayment completed"	"Payment Completed"	77.38	
+SPL	"11/30/2009"	"Other Income"	"mixedpayment completed"	-77.38
+ENDTRNS
+TRNS	"11/3/2009"	"Paypal"	"mixedSeasub Donator"	"Web Accept Payment Received"	72.52	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season (and a $3.00 donation)"	
+SPL	"11/3/2009"	"Other Income"	"mixedSeasub Donator"	-75.00
+SPL	"11/3/2009"	"Other Expenses"	Fee	2.48
+ENDTRNS
+TRNS	"11/28/2009"	"Paypal"	"mixed fundraiser"	"Web Accept Payment Received"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"	
+SPL	"11/28/2009"	"Other Income"	"mixed fundraiser"	-60.00
+SPL	"11/28/2009"	"Other Expenses"	Fee	2.04
+ENDTRNS
+TRNS	"11/28/2009"	"Paypal"	"mixed show2"	"Web Accept Payment Received"	48.25	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"	
+SPL	"11/28/2009"	"Other Income"	"mixed show2"	-50.00
+SPL	"11/28/2009"	"Other Expenses"	Fee	1.75
+ENDTRNS

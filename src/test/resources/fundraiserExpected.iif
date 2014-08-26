@@ -1,0 +1,7 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!SPL	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!ENDTRNS
+TRNS	"9/28/2009"	"Paypal"	"improv goer"	"Web Accept Payment Received"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
+SPL	"9/28/2009"	"Door Sales"	"Fundraiser"	Fundraiser	-60.00	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
+SPL	"9/28/2009"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.04	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
+ENDTRNS

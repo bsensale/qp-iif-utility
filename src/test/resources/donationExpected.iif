@@ -1,0 +1,13 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!SPL	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!ENDTRNS
+TRNS	"9/12/2009"	"Paypal"	"donating person"	"Web Accept Payment Received"	125.93	"2 Regular senior/student ticket for Dial M for Murder on 1/22/2010 - Friday, 8:00PM (+ $10.00 donation)"
+SPL	"9/12/2009"	"Door Sales"	"Dial M for Murder"	Show	-120.00	"2 Regular senior/student ticket for Dial M for Murder on 1/22/2010 - Friday, 8:00PM (+ $10.00 donation)"
+SPL	"9/12/2009"	"Paypal Expense"	"Dial M for Murder"	Show	4.07	"2 Regular senior/student ticket for Dial M for Murder on 1/22/2010 - Friday, 8:00PM (+ $10.00 donation)"
+SPL	"9/12/2009"	"Donations"	"donating person"	House	-10.00	"2 Regular senior/student ticket for Dial M for Murder on 1/22/2010 - Friday, 8:00PM (+ $10.00 donation)"
+ENDTRNS
+TRNS	"8/10/2014"	"Paypal"	"Another Donator"	"Web Accept Payment Received"	164.98	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"
+SPL	"8/10/2014"	"Season Subscription"	"Another Donator"	House	-144.00	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"
+SPL	"8/10/2014"	"Paypal Expense"	"Another Donator"	House	4.02	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"
+SPL	"8/10/2014"	"Donations"	"Another Donator"	House	-25.00	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"
+ENDTRNS

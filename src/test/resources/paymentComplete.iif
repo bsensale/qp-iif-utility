@@ -1,0 +1,6 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO
+!SPL	DATE	ACCNT	NAME	AMOUNT	MEMO
+!ENDTRNS
+TRNS	"9/30/2009"	"Paypal"	"Payment-Complete Person"	"Payment Completed"	77.38	
+SPL	"9/30/2009"	"Other Income"	"Payment-Complete Person"	-77.38
+ENDTRNS
