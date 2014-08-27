@@ -23,3 +23,8 @@ SPL	"11/28/2009"	"Door Sales"	"A Show We Did"	Show	-36.00	"2 Regular adult ticke
 SPL	"11/28/2009"	"Paypal Expense"	"A Show We Did"	Show	1.75	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"
 SPL	"11/28/2009"	"Donations"	"mixed show2"	House	-14.00	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"
 ENDTRNS
+TRNS	"11/11/2011"	"Paypal"	"mixed fundraiser donation"	"Web Accept Payment Received"	48.00	"2 awesome Fundraiser Donation $5.00"
+SPL	"11/11/2011"	"Door Sales"	"Fundraiser"	Fundraiser	-45.00	"2 awesome Fundraiser Donation $5.00"
+SPL	"11/11/2011"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.00	"2 awesome Fundraiser Donation $5.00"
+SPL	"11/11/2011"	"Donations"	"Fundraiser"	Fundraiser	-5.00	"2 awesome Fundraiser Donation $5.00"
+ENDTRNS

@@ -65,13 +65,14 @@ public class Transaction {
         }
         Double donationValue = mTransLine.mMemo.getDonationValue();
         if (donationValue != null) {
-            Name name = StringUtils.stripQuotes(mTransLine.mMemo.toString()).matches(
-                    sFunRaiserMatch) ? new Name("Fundraiser") : mTransLine.mName;
+            boolean isFundraiser = StringUtils.stripQuotes(mTransLine.mMemo.toString()).matches(sFunRaiserMatch);
+            Name name = isFundraiser ? new Name("Fundraiser") : mTransLine.mName;
+            QBClass qbclass = isFundraiser ? QBClass.FUNDRAISER : QBClass.HOUSE;
             SplitLine donation = new SplitLine(
                     mTransLine.mDate,
                     Account.DONATIONS,
                     name,
-                    QBClass.HOUSE,
+                    qbclass,
                     new Amount(donationValue),
                     mTransLine.mMemo);
             mSplitLines.add(donation);
@@ -96,8 +97,7 @@ public class Transaction {
         }
         Account account = getAccount(columns[2]);
         Amount amt = new Amount(columns[4]);
-        if (account != Account.PAYPAL_EXPENSE && mTransLine != null
-                && mTransLine.mMemo.getDonationValue() != null) {
+        if (account != Account.PAYPAL_EXPENSE && mTransLine.mMemo.getDonationValue() != null) {
             amt.mValue -= mTransLine.mMemo.getDonationValue();
         }
         SplitLine result = new SplitLine(
@@ -185,7 +185,7 @@ public class Transaction {
             mClass = QBClass.HOUSE;
             return;
         }
-        if (memo.matches(sShowMatch)) {
+        else if (memo.matches(sShowMatch)) {
             mAccount = Account.DOOR_SALES;
             Pattern p = Pattern.compile(sShowMatch);
             Matcher m = p.matcher(memo);
@@ -196,10 +196,13 @@ public class Transaction {
             mClass = QBClass.SHOW;
             return;
         }
-        if (memo.matches(sFunRaiserMatch)) {
+        else if (memo.matches(sFunRaiserMatch)) {
             mAccount = Account.DOOR_SALES;
-            mName = "Fundraiser";
+            mName = QBClass.FUNDRAISER.toString();
             mClass = QBClass.FUNDRAISER;
+        }
+        else {
+            throw new RuntimeException("Could not match the memo with any of the patterns!");
         }
     }
 

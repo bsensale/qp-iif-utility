@@ -51,4 +51,5 @@ public class AmountTest {
         Amount a = new Amount("-344.54");
         assertEquals("-344.54", a.toString());
     }
+    
 }

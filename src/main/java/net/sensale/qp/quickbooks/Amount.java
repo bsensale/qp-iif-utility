@@ -37,9 +37,6 @@ public class Amount extends QBObject<Double> {
      */
     @Override
     public String toString() {
-    	if(mValue == null) {
-    		return null;
-    	}
         NumberFormat nf = NumberFormat.getInstance();
         nf.setMaximumFractionDigits(2);
         nf.setMinimumFractionDigits(2);

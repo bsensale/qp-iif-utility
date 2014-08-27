@@ -32,7 +32,7 @@ public class TransactionCreateSplitLinesTest {
     String incomeLine1 = "SPL\t\"9/22/2009\"\t\"Other Income\"\t\"Person\"\t-80.00\r\n";
     String expenseLine1 = "SPL\t\"9/23/2009\"\t\"Other Expenses\"\tFee\t2.62";
     String incomeLine2 = "SPL\t\"9/21/2009\"\t\"Other Income\"\t\"Person\"\t-10.00";
-
+    
     @Before
     public void setUp() {
         t = new Transaction();
@@ -42,9 +42,9 @@ public class TransactionCreateSplitLinesTest {
 
         TransactionLine tl = new TransactionLine(
                 new Date("1/1/2002"),
-                Account.DOOR_SALES,
+                Account.PAYPAL,
                 new Name("name"),
-                QBClass.SHOW,
+                QBClass.WEB_PAYMENT,
                 new Amount(233.00),
                 new Memo(mMemoValue));
         t.mTransLine = tl;
@@ -57,7 +57,7 @@ public class TransactionCreateSplitLinesTest {
         List<SplitLine> splitLines = t.mSplitLines;
         assertNotNull("No split lines created", splitLines);
         assertEquals("Wrong size on split lines list", 1, splitLines.size());
-        verifyIncomeLine1(splitLines.get(0));
+        verifyIncomeLine1(splitLines.get(0), QBClass.SHOW);
     }
     
     @Test
@@ -67,8 +67,8 @@ public class TransactionCreateSplitLinesTest {
         List<SplitLine> splitLines = t.mSplitLines;
         assertNotNull("No split lines created", splitLines);
         assertEquals("Wrong size on split lines list", 2, splitLines.size());
-        verifyIncomeLine1(splitLines.get(0));
-        verifyExpenseLine1(splitLines.get(1));
+        verifyIncomeLine1(splitLines.get(0), QBClass.SHOW);
+        verifyExpenseLine1(splitLines.get(1), QBClass.SHOW);
     }
     
     @Test
@@ -79,15 +79,15 @@ public class TransactionCreateSplitLinesTest {
         assertNotNull("No split lines created", splitLines);
         assertEquals("Wrong size on split lines list", 3, splitLines.size());
         verifyIncomeLine2(splitLines.get(0));
-        verifyExpenseLine1(splitLines.get(1));
-        verifyIncomeLine1(splitLines.get(2));
+        verifyExpenseLine1(splitLines.get(1), QBClass.SHOW);
+        verifyIncomeLine1(splitLines.get(2), QBClass.SHOW);
     }
-
-    private void verifyIncomeLine1(SplitLine line) {
+    
+    private void verifyIncomeLine1(SplitLine line, QBClass qbclass) {
         assertEquals("Wrong Date", "\"9/22/2009\"", line.mDate.toString());
         assertEquals("Wrong Account", Account.DOOR_SALES, line.mAccount);
         assertEquals("Wrong Name", mShowName, line.mName.toString());
-        assertEquals("Wrong class", QBClass.SHOW, line.mClass);
+        assertEquals("Wrong class", qbclass, line.mClass);
         assertEquals("Wrong amount", "-80.00", line.mAmount.toString());
         assertEquals("Wrong memo", "\"" + mMemoValue + "\"", line.mMemo.toString());
     }
@@ -101,11 +101,11 @@ public class TransactionCreateSplitLinesTest {
         assertEquals("Wrong memo", "\"" + mMemoValue + "\"", line.mMemo.toString());
     }
     
-    private void verifyExpenseLine1(SplitLine line) {
+    private void verifyExpenseLine1(SplitLine line, QBClass qbclass) {
         assertEquals("Wrong Date", "\"9/23/2009\"", line.mDate.toString());
         assertEquals("Wrong Account", Account.PAYPAL_EXPENSE, line.mAccount);
         assertEquals("Wrong Name", mShowName, line.mName.toString());
-        assertEquals("Wrong class", QBClass.SHOW, line.mClass);
+        assertEquals("Wrong class", qbclass, line.mClass);
         assertEquals("Wrong amount", "2.62", line.mAmount.toString());
         assertEquals("Wrong memo", "\"" + mMemoValue + "\"", line.mMemo.toString());
     }

@@ -36,14 +36,11 @@ public class ConversionUtil {
             printUsage();
             System.exit(1);
         }
-        if (args[0].equalsIgnoreCase(args[1])) {
-            throw new IllegalArgumentException("Can't use same input and output file");
-        }
         List<Transaction> transactions = readInput(args[0]);
         writeOutput(args[1], transactions);
     }
 
-    private static void writeOutput(String pFileName, List<Transaction> transactions) throws IOException {
+    static void writeOutput(String pFileName, List<Transaction> transactions) throws IOException {
         File outputFile = new File(pFileName);
         if(outputFile.exists()) {
             throw new RuntimeException("Can't write to existing file: " + outputFile.getCanonicalPath());
@@ -134,8 +131,7 @@ public class ConversionUtil {
             return getNextTransaction(pIn);
         }
         catch(IllegalArgumentException e) {
-            System.out.println("IAE processing:" + startLine);
-            throw e;
+            throw new IllegalArgumentException("IAE processing:" + startLine, e);
         }
     }
 

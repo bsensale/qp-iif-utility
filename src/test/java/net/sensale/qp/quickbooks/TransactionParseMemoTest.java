@@ -74,4 +74,10 @@ public class TransactionParseMemoTest {
     	assertEquals("Wrong name", "Short", t.mName);
     	assertEquals("Wrong class", QBClass.SHOW, t.mClass);
     }
+    
+    @Test(expected = RuntimeException.class)
+    public void testBadMemo() {
+        String memo = "Bad";
+        t.parseMemo(memo, "foo");
+    }
 }

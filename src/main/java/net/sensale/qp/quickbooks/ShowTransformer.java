@@ -43,13 +43,14 @@ public class ShowTransformer {
     }
 
     String getShow(String pInput) {
-    	if(mShowMap == null) {
+        Map<String, String> showMap = getShowMap();
+    	if(showMap == null) {
     		throw new RuntimeException("Show map was never initialized.  Did you forget to getInstance()?");
     	}
         String result = pInput;
-        for(String pattern : mShowMap.keySet()) {
+        for(String pattern : showMap.keySet()) {
             if(result.contains(pattern)) {
-                result = result.replaceAll(pattern, mShowMap.get(pattern));
+                result = result.replaceAll(pattern, showMap.get(pattern));
             }
         }
         return result;
@@ -65,6 +66,10 @@ public class ShowTransformer {
 			}
     	}
     	return sTransformer;
+    }
+    
+    Map<String, String> getShowMap() {
+        return mShowMap;
     }
 
 	static String getsShowFileName() {

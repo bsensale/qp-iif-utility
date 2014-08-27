@@ -21,7 +21,7 @@ package net.sensale.qp.quickbooks;
  */
 public class StringUtils {
 
-    static String[] specialChars = {"\u00ef", "\u00bf", "\u00bd" };
+    static String[] specialChars = {"\u00ef", "\u00bf", "\u00bd", "\u00d4", "\u00f8", "\u03a9", "\ufffd" };
     
     /**
      * Removes the Quotes from a string, also pruning special characters.

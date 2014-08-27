@@ -24,3 +24,7 @@ TRNS	"11/28/2009"	"Paypal"	"mixed show2"	"Web Accept Payment Received"	48.25	"2 
 SPL	"11/28/2009"	"Other Income"	"mixed show2"	-50.00
 SPL	"11/28/2009"	"Other Expenses"	Fee	1.75
 ENDTRNS
+TRNS	"11/11/2011"	"Paypal"	"mixed fundraiser donation"	"Web Accept Payment Received"	48.00	"2 awesome Fundraiser Donation $5.00"	
+SPL	"11/11/2011"	"Other Income"	"mixed fundraiser donation"	-50.00
+SPL	"11/11/2011"	"Other Expenses"	Fee	2
+ENDTRNS

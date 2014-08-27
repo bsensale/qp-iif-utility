@@ -1,8 +1,9 @@
 package net.sensale.qp.quickbooks;
 
 import static org.mockito.Mockito.when;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
+import static org.powermock.api.mockito.PowerMockito.spy;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import org.junit.Test;
@@ -15,20 +16,22 @@ import org.powermock.modules.junit4.PowerMockRunner;
 public class ShowTransformerTest {
 	
 	@Test(expected = RuntimeException.class)
-	public void testBadFile() {
-		mockStatic(ShowTransformer.class);
+	public void testBadFile() throws IOException {
+		spy(ShowTransformer.class);
 		when(ShowTransformer.getsShowFileName()).thenReturn("bad");
-		ShowTransformer.getInstance().getShow("foo");
+	    ShowTransformer.loadShows();
 	}
 	
 	@Test(expected = RuntimeException.class)
 	public void testCallWithEmptyMap() {
-		mockStatic(ShowTransformer.class);
 		HashMap<String,String> map = null;
 		ShowTransformer t = new ShowTransformer(map);
+		when(t.getShowMap()).thenReturn(null);
 		t.getShow("foo");
-		
 	}
+	
+//	@Test(expected = IOException.class)
+//	public void testBadFileNameLoad
 	
 
 }
