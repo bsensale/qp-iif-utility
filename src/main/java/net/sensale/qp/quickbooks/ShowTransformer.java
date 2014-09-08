@@ -53,6 +53,17 @@ public class ShowTransformer {
                 result = result.replaceAll(pattern, showMap.get(pattern));
             }
         }
+        if(result.contains("...")) {
+            StringBuffer msg = new StringBuffer();
+            msg.append("Show transform seems to have failed for input: <");
+            msg.append(pInput);
+            msg.append(">.  Keys were: ");
+            msg.append(showMap.keySet());
+            msg.append(">, Values were: ");
+            msg.append(showMap.values());
+            msg.append(">.");
+            throw new RuntimeException(msg.toString());
+        }
         return result;
     }
     

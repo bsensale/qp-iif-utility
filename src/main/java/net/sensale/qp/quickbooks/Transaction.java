@@ -193,7 +193,7 @@ public class Transaction {
             String group1 = m.group(1);
             String group2 = m.group(2);
             mName = ShowTransformer.getInstance().getShow(group1 != null ? group1 : group2);
-            mClass = QBClass.SHOW;
+            mClass = memo.matches(sFunRaiserMatch)? QBClass.FUNDRAISER : QBClass.SHOW;
             return;
         }
         else if (memo.matches(sFunRaiserMatch)) {

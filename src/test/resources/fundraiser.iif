@@ -5,3 +5,7 @@ TRNS	"9/28/2009"	"Paypal"	"improv goer"	"Web Accept Payment Received"	57.96	"2 I
 SPL	"9/28/2009"	"Other Income"	"improv goer"	-60.00
 SPL	"9/28/2009"	"Other Expenses"	Fee	2.04
 ENDTRNS
+TRNS	"8/29/2014"	"Paypal"	"suburban person"	"Express Checkout Payment Received"	21.22	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"	
+SPL	"8/29/2014"	"Other Income"	"suburban person"	-22.00
+SPL	"8/29/2014"	"Other Expenses"	Fee	0.78
+ENDTRNS
