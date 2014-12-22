@@ -31,11 +31,26 @@ public class MemoDonationValueTest {
     }
     
     @Test
-    public void testGetNewDonationValue() {
+    public void testGetNewDonationValueSeasub() {
         String input = "#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00 + Donation $25.00";
         Memo memo = new Memo(input);
         assertEquals(new Double(-25.00), memo.getDonationValue());
     }
+    
+    @Test
+    public void testGetNewDonationValueFundraiser() {
+        String input = "#135 - Tickets for Suburban H... on 12/5/2014 for 2 Fundraiser+ $25";
+        Memo memo = new Memo(input);
+        assertEquals(new Double(-25.00), memo.getDonationValue());
+    }
+    
+    @Test
+    public void testGetNewDonationValueShow() {
+        String input = "#120 - Tickets for November... on 10/24/2014 for 2 Adult+ $100";
+        Memo memo = new Memo(input);
+        assertEquals(new Double(-100.00), memo.getDonationValue());
+    }
+    
     @Test
     public void testNullString() {
         Memo memo = new Memo(null);

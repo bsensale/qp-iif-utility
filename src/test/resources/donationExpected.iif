@@ -11,3 +11,13 @@ SPL	"8/10/2014"	"Season Subscription"	"Another Donator"	House	-144.00	"#5 - 2 Re
 SPL	"8/10/2014"	"Paypal Expense"	"Another Donator"	House	4.02	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"
 SPL	"8/10/2014"	"Donations"	"Another Donator"	House	-25.00	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"
 ENDTRNS
+TRNS	"8/10/2014"	"Paypal"	"Yet Another Donator"	"Web Accept Payment Received"	65.23	"#135 - Tickets for Suburban H... on 12/5/2014 for 2 Fundraiser+ $25"
+SPL	"8/10/2014"	"Door Sales"	"Suburban Holidays"	Fundraiser	-42.00	"#135 - Tickets for Suburban H... on 12/5/2014 for 2 Fundraiser+ $25"
+SPL	"8/10/2014"	"Paypal Expense"	"Suburban Holidays"	Fundraiser	1.77	"#135 - Tickets for Suburban H... on 12/5/2014 for 2 Fundraiser+ $25"
+SPL	"8/10/2014"	"Donations"	"Yet Another Donator"	House	-25.00	"#135 - Tickets for Suburban H... on 12/5/2014 for 2 Fundraiser+ $25"
+ENDTRNS
+TRNS	"9/12/2009"	"Paypal"	"donating person"	"Web Accept Payment Received"	136.62	"#120 - Tickets for November... on 10/24/2014 for 2 Adult+ $100"
+SPL	"9/12/2009"	"Door Sales"	"November"	Show	-40.00	"#120 - Tickets for November... on 10/24/2014 for 2 Adult+ $100"
+SPL	"9/12/2009"	"Paypal Expense"	"November"	Show	3.38	"#120 - Tickets for November... on 10/24/2014 for 2 Adult+ $100"
+SPL	"9/12/2009"	"Donations"	"donating person"	House	-100.00	"#120 - Tickets for November... on 10/24/2014 for 2 Adult+ $100"
+ENDTRNS

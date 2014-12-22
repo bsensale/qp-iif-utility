@@ -26,5 +26,5 @@ ENDTRNS
 TRNS	"11/11/2011"	"Paypal"	"mixed fundraiser donation"	"Web Accept Payment Received"	48.00	"2 awesome Fundraiser Donation $5.00"
 SPL	"11/11/2011"	"Door Sales"	"Fundraiser"	Fundraiser	-45.00	"2 awesome Fundraiser Donation $5.00"
 SPL	"11/11/2011"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.00	"2 awesome Fundraiser Donation $5.00"
-SPL	"11/11/2011"	"Donations"	"Fundraiser"	Fundraiser	-5.00	"2 awesome Fundraiser Donation $5.00"
+SPL	"11/11/2011"	"Donations"	"mixed fundraiser donation"	House	-5.00	"2 awesome Fundraiser Donation $5.00"
 ENDTRNS

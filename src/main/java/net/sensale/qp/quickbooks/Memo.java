@@ -38,9 +38,25 @@ public class Memo extends QBObject<String> {
         if(mValue.contains("onation")) {
             return parseDonationValue();
         }
+        if(mValue.contains("+")) {
+            return parseValueNoDonationString();
+        }
         else return null;
     }
     
+    Double parseValueNoDonationString() {
+        Pattern p = Pattern.compile(".*\\+ \\$([0-9]+(?:\\.[0-9][0-9])?)$");
+        Matcher m = p.matcher(mValue);
+        if(!m.matches()) {
+            throw new RuntimeException("Failed to match value to the pattern:" + mValue);
+        }
+        Double result = new Double(m.group(1))*-1;
+        if(result == 0D) {
+            return null;
+        }
+        return result;
+    }
+
     /**
      * Extracts the Donation amount from the String.  This works for the following two patterns:
      * 

@@ -65,9 +65,11 @@ public class Transaction {
         }
         Double donationValue = mTransLine.mMemo.getDonationValue();
         if (donationValue != null) {
-            boolean isFundraiser = StringUtils.stripQuotes(mTransLine.mMemo.toString()).matches(sFunRaiserMatch);
-            Name name = isFundraiser ? new Name("Fundraiser") : mTransLine.mName;
-            QBClass qbclass = isFundraiser ? QBClass.FUNDRAISER : QBClass.HOUSE;
+            //boolean isFundraiser = StringUtils.stripQuotes(mTransLine.mMemo.toString()).matches(sFunRaiserMatch);
+            //Name name = isFundraiser ? new Name("Fundraiser") : mTransLine.mName;
+            //QBClass qbclass = isFundraiser ? QBClass.FUNDRAISER : QBClass.HOUSE;
+            Name name = mTransLine.mName;
+            QBClass qbclass = QBClass.HOUSE;
             SplitLine donation = new SplitLine(
                     mTransLine.mDate,
                     Account.DONATIONS,
