@@ -143,28 +143,33 @@ public class Transaction {
         if (!"TRNS".equals(columns[0])) {
             throw new IllegalArgumentException("Line didn't start with TRNS: " + pTransLine);
         }
-        checkClass(columns[4]);
-        parseMemo(columns[6], columns[3]);
-                                                               // columns[0] = TRNS, throw away
+        QBClass headerClass = parseClassAndDetectDonation(columns[4]);
+        String memo = parseMemo(columns[6], columns[3]);
+        
         mTransLine = new TransactionLine(new Date(columns[1]), // columns[1] = "10/1/2009"
                 Account.PAYPAL,                                // columns[2] = "Paypal", always use Paypal
                 new Name(columns[3]),                          // columns[3] = "Person Lastname"
-                QBClass.WEB_PAYMENT,                           // columns[4] = "Web Accept Payment Received"
+                headerClass,                                   // columns[4] = "Web Accept Payment Received"
                 new Amount(columns[5]),                        // columns[5] = 44.44 (total amount of transaction 
-                new Memo(columns[6]));                         // columns[6] = "Descriptive memo"
+                new Memo(memo));                               // columns[6] = "Descriptive memo"
     }
 
     /**
-     * Checks that we can handle the class of transaction.  Today that is "Payment Received"
+     * Checks that we can handle the class of transaction.  Today that is "Payment Received",
+     * "Payment Completed" or "Donation Received"
      * @param pClass
      */
-    void checkClass(String pClass) {
+    QBClass parseClassAndDetectDonation(String pClass) {
         String input = StringUtils.stripQuotes(pClass);
         if(input == null) {
             throw new IllegalArgumentException("Class String was null");
         }
         else if (input.endsWith("Payment Received")) {
-            return;
+            return QBClass.WEB_PAYMENT;
+        }
+        else if (input.equals("Donation Received")) {
+            mClass = QBClass.DONATION;
+            return QBClass.DONATION;
         }
         else if ("Payment Completed".equals(input)) {
             throw new PaymentCompletedClassException(
@@ -179,13 +184,13 @@ public class Transaction {
      * @param pMemo The memo section of the line
      * @param pName The name section of the line.
      */
-    void parseMemo(String pMemo, String pName) {
+    String parseMemo(String pMemo, String pName) {
         String memo = StringUtils.stripQuotes(pMemo);
         if (memo.matches(sSeasubRegEx)) {
             mAccount = Account.SEA_SUB;
             mName = pName;
             mClass = QBClass.HOUSE;
-            return;
+            return pMemo;
         }
         else if (memo.matches(sShowMatch)) {
             mAccount = Account.DOOR_SALES;
@@ -196,15 +201,23 @@ public class Transaction {
             String group2 = m.group(2);
             mName = ShowTransformer.getInstance().getShow(group1 != null ? group1 : group2);
             mClass = memo.matches(sFunRaiserMatch)? QBClass.FUNDRAISER : QBClass.SHOW;
-            return;
+            return pMemo;
         }
         else if (memo.matches(sFunRaiserMatch)) {
             mAccount = Account.DOOR_SALES;
             mName = QBClass.FUNDRAISER.toString();
             mClass = QBClass.FUNDRAISER;
+            return pMemo;
+        }
+        else if (mClass == QBClass.DONATION) {
+            mAccount = Account.DONATIONS;
+            mName = QBClass.FUNDRAISER.toString();
+            mClass = QBClass.FUNDRAISER;
+            //Hack for 80 for 80
+            return "80 for 80";
         }
         else {
-            throw new RuntimeException("Could not match the memo with any of the patterns!");
+            throw new RuntimeException("Could not match the memo with any of the patterns: " + memo);
         }
     }
 

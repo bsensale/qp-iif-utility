@@ -9,3 +9,7 @@ TRNS	"8/29/2014"	"Paypal"	"suburban person"	"Web Accept Payment Received"	21.22	
 SPL	"8/29/2014"	"Door Sales"	"Suburban Holidays"	Fundraiser	-22.00	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"
 SPL	"8/29/2014"	"Paypal Expense"	"Suburban Holidays"	Fundraiser	0.78	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"
 ENDTRNS
+TRNS	"12/3/2016"	"Paypal"	"Donor"	"Donation Received"	77.94	"80 for 80"
+SPL	"12/3/2016"	"Donations"	"Fundraiser"	Fundraiser	-80.00	"80 for 80"
+SPL	"12/3/2016"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.06	"80 for 80"
+ENDTRNS

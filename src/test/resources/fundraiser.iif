@@ -9,3 +9,7 @@ TRNS	"8/29/2014"	"Paypal"	"suburban person"	"Express Checkout Payment Received"	
 SPL	"8/29/2014"	"Other Income"	"suburban person"	-22.00
 SPL	"8/29/2014"	"Other Expenses"	Fee	0.78
 ENDTRNS
+TRNS	"12/3/2016"	"Paypal"	"Donor"	"Donation Received"	77.94	"Quannapowit Players"	
+SPL	"12/3/2016"	"Other Income"	"Donor"	-80.00
+SPL	"12/3/2016"	"Other Expenses"	Fee	2.06
+ENDTRNS

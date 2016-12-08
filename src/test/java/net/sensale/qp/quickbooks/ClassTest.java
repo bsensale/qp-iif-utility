@@ -33,4 +33,19 @@ public class ClassTest {
         QBClass a = QBClass.SHOW;
         assertEquals("Show", a.toString());
     }
+    
+    @Test public void testGetNameFundraiser() {
+        QBClass a = QBClass.FUNDRAISER;
+        assertEquals("Fundraiser",  a.toString());
+    }
+    
+    @Test public void testGetNameWebPayment() {
+        QBClass a = QBClass.WEB_PAYMENT;
+        assertEquals("\"Web Accept Payment Received\"",  a.toString());
+    }
+    
+    @Test public void testGetNameDonation() {
+        QBClass a = QBClass.DONATION;
+        assertEquals("\"Donation Received\"",  a.toString());
+    }
 }

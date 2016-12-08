@@ -67,6 +67,16 @@ public class TransactionParseMemoTest {
     }
     
     @Test
+    public void testDonation() {
+        String memo = "Quannapowitt Players";
+        t.mClass = QBClass.DONATION;
+        t.parseMemo(memo, "foo");
+        assertEquals("Wrong account", Account.DONATIONS, t.mAccount);
+        assertEquals("Wrong name", "Fundraiser", t.mName);
+        assertEquals("Wrong class", QBClass.FUNDRAISER, t.mClass);
+    }
+    
+    @Test
     public void testShortNameWithElipses() {
     	String memo = "#2 - Tickets for Short... on 10/19/2014 for 1 Senior/Student";
     	t.parseMemo(memo, "foo");

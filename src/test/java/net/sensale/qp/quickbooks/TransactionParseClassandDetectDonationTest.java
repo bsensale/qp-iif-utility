@@ -15,11 +15,13 @@
  */
 package net.sensale.qp.quickbooks;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
 
-public class TransactionCheckClassTest {
+public class TransactionParseClassandDetectDonationTest {
 
     Transaction t;
     @Before
@@ -29,22 +31,28 @@ public class TransactionCheckClassTest {
     
     @Test
     public void testValidClass() {
-        t.checkClass("Web Accept Payment Received");
+        QBClass a = t.parseClassAndDetectDonation("Web Accept Payment Received");
+        assertEquals(QBClass.WEB_PAYMENT, a);
     }
     
     @Test(expected=IllegalArgumentException.class)
     public void testNull() {
-    	t.checkClass(null);
+    	t.parseClassAndDetectDonation(null);
     }
     
+    @Test
+    public void testDonation() {
+        QBClass a = t.parseClassAndDetectDonation("Donation Received");
+        assertEquals(QBClass.DONATION, a);
+    }
     
     @Test(expected=PaymentCompletedClassException.class)
     public void testPaymentException() {
-        t.checkClass("Payment Completed");
+        t.parseClassAndDetectDonation("Payment Completed");
     }
     
     @Test(expected=UnsupportedClassException.class)
     public void testUnsupportedClassException() {
-        t.checkClass("foo");
+        t.parseClassAndDetectDonation("foo");
     }
 }
