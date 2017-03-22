@@ -1,0 +1,15 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!SPL	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
+!ENDTRNS
+TRNS	"2/25/2017"	"Paypal"	"George Nobody"	"Web Accept Checkout Payment"	18.28	"#273 - Tickets for A Lion in ... on 4/2/2017 for 1 Senior/Student"
+SPL	"2/25/2017"	"Door Sales"	"The Lion in Winter"	Show	-19.00	"#273 - Tickets for A Lion in ... on 4/2/2017 for 1 Senior/Student"
+SPL	"2/25/2017"	"Paypal Expense"	"The Lion in Winter"	Show	0.72	"#273 - Tickets for A Lion in ... on 4/2/2017 for 1 Senior/Student"
+ENDTRNS
+TRNS	"3/8/2017"	"Paypal"	"Catherine Esposito"	"Web Accept Checkout Payment"	85.76	"#281 - Tickets for A Lion in ... on 4/1/2017 for 3 Online - Adult+ $25"
+SPL	"3/8/2017"	"Door Sales"	"The Lion in Winter"	Show	-63.00	"#281 - Tickets for A Lion in ... on 4/1/2017 for 3 Online - Adult+ $25"
+SPL	"3/8/2017"	"Paypal Expense"	"The Lion in Winter"	Show	2.24	"#281 - Tickets for A Lion in ... on 4/1/2017 for 3 Online - Adult+ $25"
+SPL	"3/8/2017"	"Donations"	"Catherine Esposito"	House	-25.00	"#281 - Tickets for A Lion in ... on 4/1/2017 for 3 Online - Adult+ $25"
+ENDTRNS
+TRNS	"1/23/2017"	"Paypal"		House	-1,241.79	"Transfer to bank account"
+SPL	"1/23/2017"	"Checking"		House	1,241.79	"Transfer to bank account"
+ENDTRNS

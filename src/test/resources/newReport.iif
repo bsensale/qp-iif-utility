@@ -1,0 +1,14 @@
+!TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO
+!SPL	DATE	ACCNT	NAME	AMOUNT	MEMO
+!ENDTRNS
+TRNS	"2/25/2017"	"PayPal"	"George Nobody"	"Express Checkout Payment"	18.28	"#273 - Tickets for A Lion in ... on 4/2/2017 for 1 Senior/Student"	
+SPL	"2/25/2017"	"Other income"	"George Nobody"	-19.00	
+SPL	"2/25/2017"	"Other expenses"	Fee	0.72	
+ENDTRNS
+TRNS	"3/8/2017"	"PayPal"	"Catherine Esposito"	"Express Checkout Payment"	85.76	"#281 - Tickets for A Lion in ... on 4/1/2017 for 3 Online - Adult+ $25"	
+SPL	"3/8/2017"	"Other income"	"Catherine Esposito"	-88.00	
+SPL	"3/8/2017"	"Other expenses"	Fee	2.24	
+ENDTRNS
+TRNS	"1/23/2017"	"PayPal"	""	"General Withdrawal"	-1,241.79	
+SPL	"1/23/2017"	"Other expenses"	""	1,241.79	
+ENDTRNS
