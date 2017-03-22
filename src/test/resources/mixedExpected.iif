@@ -1,29 +1,29 @@
 !TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
 !SPL	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
 !ENDTRNS
-TRNS	"11/30/2009"	"Paypal"	"mixed show"	"Web Accept Payment Received"	38.54	"2 Adult Musical Ticket(s), This is a show - 9/19/2009, Saturday, 8:00PM"
+TRNS	"11/30/2009"	"Paypal"	"mixed show"	"Web Accept Checkout Payment"	38.54	"2 Adult Musical Ticket(s), This is a show - 9/19/2009, Saturday, 8:00PM"
 SPL	"11/30/2009"	"Door Sales"	"This is a show"	Show	-40.00	"2 Adult Musical Ticket(s), This is a show - 9/19/2009, Saturday, 8:00PM"
 SPL	"11/30/2009"	"Paypal Expense"	"This is a show"	Show	1.46	"2 Adult Musical Ticket(s), This is a show - 9/19/2009, Saturday, 8:00PM"
 ENDTRNS
-TRNS	"11/19/2009"	"Paypal"	"mixedseasub user"	"Web Accept Payment Received"	291.00	"4 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"
+TRNS	"11/19/2009"	"Paypal"	"mixedseasub user"	"Web Accept Checkout Payment"	291.00	"4 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"
 SPL	"11/19/2009"	"Season Subscription"	"mixedseasub user"	House	-300.00	"4 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"
 SPL	"11/19/2009"	"Paypal Expense"	"mixedseasub user"	House	9.00	"4 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season"
 ENDTRNS
-TRNS	"11/3/2009"	"Paypal"	"mixedSeasub Donator"	"Web Accept Payment Received"	72.52	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season (and a $3.00 donation)"
+TRNS	"11/3/2009"	"Paypal"	"mixedSeasub Donator"	"Web Accept Checkout Payment"	72.52	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season (and a $3.00 donation)"
 SPL	"11/3/2009"	"Season Subscription"	"mixedSeasub Donator"	House	-72.00	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season (and a $3.00 donation)"
 SPL	"11/3/2009"	"Paypal Expense"	"mixedSeasub Donator"	House	2.48	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season (and a $3.00 donation)"
 SPL	"11/3/2009"	"Donations"	"mixedSeasub Donator"	House	-3.00	"2 Season Subscription(s) to the Quannapowwit Players 2007 - 2008 Season (and a $3.00 donation)"
 ENDTRNS
-TRNS	"11/28/2009"	"Paypal"	"mixed fundraiser"	"Web Accept Payment Received"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
+TRNS	"11/28/2009"	"Paypal"	"mixed fundraiser"	"Web Accept Checkout Payment"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
 SPL	"11/28/2009"	"Door Sales"	"Fundraiser"	Fundraiser	-60.00	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
 SPL	"11/28/2009"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.04	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
 ENDTRNS
-TRNS	"11/28/2009"	"Paypal"	"mixed show2"	"Web Accept Payment Received"	48.25	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"
+TRNS	"11/28/2009"	"Paypal"	"mixed show2"	"Web Accept Checkout Payment"	48.25	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"
 SPL	"11/28/2009"	"Door Sales"	"A Show We Did"	Show	-36.00	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"
 SPL	"11/28/2009"	"Paypal Expense"	"A Show We Did"	Show	1.75	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"
 SPL	"11/28/2009"	"Donations"	"mixed show2"	House	-14.00	"2 Regular adult ticket for A Show We Did on 11/28/2009 - Saturday, 8:00PM (+ $14.00 donation)"
 ENDTRNS
-TRNS	"11/11/2011"	"Paypal"	"mixed fundraiser donation"	"Web Accept Payment Received"	48.00	"2 awesome Fundraiser Donation $5.00"
+TRNS	"11/11/2011"	"Paypal"	"mixed fundraiser donation"	"Web Accept Checkout Payment"	48.00	"2 awesome Fundraiser Donation $5.00"
 SPL	"11/11/2011"	"Door Sales"	"Fundraiser"	Fundraiser	-45.00	"2 awesome Fundraiser Donation $5.00"
 SPL	"11/11/2011"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.00	"2 awesome Fundraiser Donation $5.00"
 SPL	"11/11/2011"	"Donations"	"mixed fundraiser donation"	House	-5.00	"2 awesome Fundraiser Donation $5.00"

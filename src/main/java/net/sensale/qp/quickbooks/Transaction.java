@@ -149,14 +149,14 @@ public class Transaction {
         mTransLine = new TransactionLine(new Date(columns[1]), // columns[1] = "10/1/2009"
                 Account.PAYPAL,                                // columns[2] = "Paypal", always use Paypal
                 new Name(columns[3]),                          // columns[3] = "Person Lastname"
-                headerClass,                                   // columns[4] = "Web Accept Payment Received"
+                headerClass,                                   // columns[4] = "Web Accept Checkout Payment"
                 new Amount(columns[5]),                        // columns[5] = 44.44 (total amount of transaction 
                 new Memo(memo));                               // columns[6] = "Descriptive memo"
     }
 
     /**
-     * Checks that we can handle the class of transaction.  Today that is "Payment Received",
-     * "Payment Completed" or "Donation Received"
+     * Checks that we can handle the class of transaction.  Today that is "Checkout Payment",
+     * "Payment Completed" or "Donation Payment"
      * @param pClass
      */
     QBClass parseClassAndDetectDonation(String pClass) {
@@ -164,10 +164,10 @@ public class Transaction {
         if(input == null) {
             throw new IllegalArgumentException("Class String was null");
         }
-        else if (input.endsWith("Payment Received")) {
+        else if (input.endsWith("Checkout Payment")) {
             return QBClass.WEB_PAYMENT;
         }
-        else if (input.equals("Donation Received")) {
+        else if (input.equals("Donation Payment")) {
             mClass = QBClass.DONATION;
             return QBClass.DONATION;
         }

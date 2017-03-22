@@ -39,13 +39,18 @@ public class ClassTest {
         assertEquals("Fundraiser",  a.toString());
     }
     
+    @Test public void testGetNameExpressCheckout() {
+        QBClass a = QBClass.WEB_PAYMENT;
+        assertEquals("\"Web Accept Checkout Payment\"",  a.toString());
+    }
+    
     @Test public void testGetNameWebPayment() {
         QBClass a = QBClass.WEB_PAYMENT;
-        assertEquals("\"Web Accept Payment Received\"",  a.toString());
+        assertEquals("\"Web Accept Checkout Payment\"",  a.toString());
     }
     
     @Test public void testGetNameDonation() {
         QBClass a = QBClass.DONATION;
-        assertEquals("\"Donation Received\"",  a.toString());
+        assertEquals("\"Donation Payment\"",  a.toString());
     }
 }

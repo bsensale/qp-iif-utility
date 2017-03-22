@@ -29,10 +29,10 @@ public enum QBClass {
     public String toString() {
         String result = name();
         if(result.equals(WEB_PAYMENT.name())) {
-            return "\"Web Accept Payment Received\"";
+            return "\"Web Accept Checkout Payment\"";
         }
         if(result.equals(DONATION.name())) {
-            return "\"Donation Received\"";
+            return "\"Donation Payment\"";
         }
         return result.substring(0, 1) + result.substring(1, result.length()).toLowerCase();
     }

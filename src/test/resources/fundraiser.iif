@@ -1,15 +1,15 @@
 !TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO
 !SPL	DATE	ACCNT	NAME	AMOUNT	MEMO
 !ENDTRNS
-TRNS	"9/28/2009"	"Paypal"	"improv goer"	"Web Accept Payment Received"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"	
+TRNS	"9/28/2009"	"Paypal"	"improv goer"	"Web Accept Checkout Payment"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"	
 SPL	"9/28/2009"	"Other Income"	"improv goer"	-60.00
 SPL	"9/28/2009"	"Other Expenses"	Fee	2.04
 ENDTRNS
-TRNS	"8/29/2014"	"Paypal"	"suburban person"	"Express Checkout Payment Received"	21.22	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"	
+TRNS	"8/29/2014"	"Paypal"	"suburban person"	"Express Checkout Payment"	21.22	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"	
 SPL	"8/29/2014"	"Other Income"	"suburban person"	-22.00
 SPL	"8/29/2014"	"Other Expenses"	Fee	0.78
 ENDTRNS
-TRNS	"12/3/2016"	"Paypal"	"Donor"	"Donation Received"	77.94	"Quannapowit Players"	
+TRNS	"12/3/2016"	"Paypal"	"Donor"	"Donation Payment"	77.94	"Quannapowit Players"	
 SPL	"12/3/2016"	"Other Income"	"Donor"	-80.00
 SPL	"12/3/2016"	"Other Expenses"	Fee	2.06
 ENDTRNS

@@ -31,7 +31,7 @@ public class TransactionParseClassandDetectDonationTest {
     
     @Test
     public void testValidClass() {
-        QBClass a = t.parseClassAndDetectDonation("Web Accept Payment Received");
+        QBClass a = t.parseClassAndDetectDonation("Web Accept Checkout Payment");
         assertEquals(QBClass.WEB_PAYMENT, a);
     }
     
@@ -42,7 +42,7 @@ public class TransactionParseClassandDetectDonationTest {
     
     @Test
     public void testDonation() {
-        QBClass a = t.parseClassAndDetectDonation("Donation Received");
+        QBClass a = t.parseClassAndDetectDonation("Donation Payment");
         assertEquals(QBClass.DONATION, a);
     }
     

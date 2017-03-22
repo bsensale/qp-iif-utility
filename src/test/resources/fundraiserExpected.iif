@@ -1,15 +1,15 @@
 !TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
 !SPL	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO	
 !ENDTRNS
-TRNS	"9/28/2009"	"Paypal"	"improv goer"	"Web Accept Payment Received"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
+TRNS	"9/28/2009"	"Paypal"	"improv goer"	"Web Accept Checkout Payment"	57.96	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
 SPL	"9/28/2009"	"Door Sales"	"Fundraiser"	Fundraiser	-60.00	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
 SPL	"9/28/2009"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.04	"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM"
 ENDTRNS
-TRNS	"8/29/2014"	"Paypal"	"suburban person"	"Web Accept Payment Received"	21.22	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"
+TRNS	"8/29/2014"	"Paypal"	"suburban person"	"Web Accept Checkout Payment"	21.22	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"
 SPL	"8/29/2014"	"Door Sales"	"Suburban Holidays"	Fundraiser	-22.00	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"
 SPL	"8/29/2014"	"Paypal Expense"	"Suburban Holidays"	Fundraiser	0.78	"#13 - Tickets for Suburban H... on 11/29/2014 for 2 Fundraiser"
 ENDTRNS
-TRNS	"12/3/2016"	"Paypal"	"Donor"	"Donation Received"	77.94	"80 for 80"
+TRNS	"12/3/2016"	"Paypal"	"Donor"	"Donation Payment"	77.94	"80 for 80"
 SPL	"12/3/2016"	"Donations"	"Fundraiser"	Fundraiser	-80.00	"80 for 80"
 SPL	"12/3/2016"	"Paypal Expense"	"Fundraiser"	Fundraiser	2.06	"80 for 80"
 ENDTRNS

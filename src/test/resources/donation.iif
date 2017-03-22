@@ -1,19 +1,19 @@
 !TRNS	DATE	ACCNT	NAME	CLASS	AMOUNT	MEMO
 !SPL	DATE	ACCNT	NAME	AMOUNT	MEMO
 !ENDTRNS
-TRNS	"9/12/2009"	"Paypal"	"donating person"	"Web Accept Payment Received"	125.93	"2 Regular senior/student ticket for Dial "M" for Murder on 1/22/2010 - Friday, 8:00PM (+ $10.00 donation)"	
+TRNS	"9/12/2009"	"Paypal"	"donating person"	"Web Accept Checkout Payment"	125.93	"2 Regular senior/student ticket for Dial "M" for Murder on 1/22/2010 - Friday, 8:00PM (+ $10.00 donation)"	
 SPL	"9/12/2009"	"Other Income"	"donating person"	-130.00
 SPL	"9/12/2009"	"Other Expenses"	Fee	4.07
 ENDTRNS
-TRNS	"8/10/2014"	"Paypal"	"Another Donator"	"Express Checkout Payment Received"	164.98	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"	
+TRNS	"8/10/2014"	"Paypal"	"Another Donator"	"Express Checkout Payment"	164.98	"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00"	
 SPL	"8/10/2014"	"Other Income"	"Another Donator"	-169.00
 SPL	"8/10/2014"	"Other Expenses"	Fee	4.02
 ENDTRNS
-TRNS	"8/10/2014"	"Paypal"	"Yet Another Donator"	"Express Checkout Payment Received"	65.23	"#135 - Tickets for Suburban H... on 12/5/2014 for 2 Fundraiser+ $25"	
+TRNS	"8/10/2014"	"Paypal"	"Yet Another Donator"	"Express Checkout Payment"	65.23	"#135 - Tickets for Suburban H... on 12/5/2014 for 2 Fundraiser+ $25"	
 SPL	"8/10/2014"	"Other Income"	"Yet Another Donator"	-67.00
 SPL	"8/10/2014"	"Other Expenses"	Fee	1.77
 ENDTRNS
-TRNS	"9/12/2009"	"Paypal"	"donating person"	"Web Accept Payment Received"	136.62	"#120 - Tickets for November... on 10/24/2014 for 2 Adult+ $100"	
+TRNS	"9/12/2009"	"Paypal"	"donating person"	"Web Accept Checkout Payment"	136.62	"#120 - Tickets for November... on 10/24/2014 for 2 Adult+ $100"	
 SPL	"9/12/2009"	"Other Income"	"donating person"	-140.00
 SPL	"9/12/2009"	"Other Expenses"	Fee	3.38
 ENDTRNS

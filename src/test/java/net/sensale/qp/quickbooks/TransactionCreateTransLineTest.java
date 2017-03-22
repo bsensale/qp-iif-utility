@@ -30,7 +30,7 @@ public class TransactionCreateTransLineTest {
 
     @Test
     public void testSeaSubWithDonation() {
-        String input = "TRNS\t\"9/25/2009\"\t\"Paypal\"\t\"Robert Man\"\t\"Web Accept Payment Received\"\t242.45\t\"2 Regular Season Subscription for 5 Shows @ $75.00 = $150.00 (+ $100.00 donation)\"";
+        String input = "TRNS\t\"9/25/2009\"\t\"Paypal\"\t\"Robert Man\"\t\"Web Accept Checkout Payment\"\t242.45\t\"2 Regular Season Subscription for 5 Shows @ $75.00 = $150.00 (+ $100.00 donation)\"";
         t.createTransLine(input);
         TransactionLine tl = t.mTransLine;
         assertEquals("Wrong date", "\"9/25/2009\"", tl.mDate.toString());
@@ -48,7 +48,7 @@ public class TransactionCreateTransLineTest {
     
     @Test
     public void testSeaSubWithDifferentDonationFormat() {
-    	String input = "TRNS\t\"8/10/2014\"\t\"Paypal\"\t\"Ed Person\"\t\"Express Checkout Payment Received\"\t164.98\t\"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00\"";
+    	String input = "TRNS\t\"8/10/2014\"\t\"Paypal\"\t\"Ed Person\"\t\"Express Checkout Payment\"\t164.98\t\"#5 - 2 Regular Season Subscription for 4 Shows with transaction fee @ $72.00 each = $144.00  + Donation $25.00\"";
     	t.createTransLine(input);
         TransactionLine tl = t.mTransLine;
         assertEquals("Wrong date", "\"8/10/2014\"", tl.mDate.toString());
@@ -66,7 +66,7 @@ public class TransactionCreateTransLineTest {
     
     @Test
     public void testFunRaiser() {
-        String input = "TRNS\t\"9/28/2009\"\t\"Paypal\"\t\"someone\"\t\"Web Accept Payment Received\"\t57.96\t\"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM\"\t";
+        String input = "TRNS\t\"9/28/2009\"\t\"Paypal\"\t\"someone\"\t\"Web Accept Checkout Payment\"\t57.96\t\"2 Improv Workshop and Performance for A NIGHT OF IMPROV - a Fundraiser on 10/10/2009 - Saturday, 8:00PM\"\t";
         t.createTransLine(input);
         TransactionLine tl = t.mTransLine;
         assertEquals("Wrong date", "\"9/28/2009\"", tl.mDate.toString());
@@ -83,7 +83,7 @@ public class TransactionCreateTransLineTest {
     
     @Test
     public void testEmbeddedQuotes() {
-        String input = "TRNS\t\"9/23/2009\"\t\"Paypal\"\t\"A Person\"\t\"Web Accept Payment Received\"\t32.71\t\"2 Regular senior/student ticket for This \"is\" a show on 1/22/2010 - Friday, 8:00PM\"\t";
+        String input = "TRNS\t\"9/23/2009\"\t\"Paypal\"\t\"A Person\"\t\"Web Accept Checkout Payment\"\t32.71\t\"2 Regular senior/student ticket for This \"is\" a show on 1/22/2010 - Friday, 8:00PM\"\t";
         t.createTransLine(input);
         TransactionLine tl = t.mTransLine;
         assertEquals("Wrong date", "\"9/23/2009\"", tl.mDate.toString());
