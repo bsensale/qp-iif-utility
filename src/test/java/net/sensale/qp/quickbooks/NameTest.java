@@ -17,6 +17,7 @@ package net.sensale.qp.quickbooks;
 
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
@@ -28,13 +29,14 @@ public class NameTest {
         assertEquals("foo", name.mValue);
     }
     
-    @Test(expected=IllegalArgumentException.class)
     public void testNullValue() {
-        new Name(null);
+        Name name = new Name(null);
+        assertNull(name);
+    }
+    
+    public void testEmptyString() {
+    	Name name = new Name("");
+    	assertEquals("", name);
     }
  
-    @Test(expected=IllegalArgumentException.class)
-    public void testEmptyValue() {
-        new Name("");
-    }
 }

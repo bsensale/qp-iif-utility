@@ -11,5 +11,5 @@ SPL	"3/8/2017"	"Paypal Expense"	"The Lion in Winter"	Show	2.24	"#281 - Tickets f
 SPL	"3/8/2017"	"Donations"	"Catherine Esposito"	House	-25.00	"#281 - Tickets for A Lion in ... on 4/1/2017 for 3 Online - Adult+ $25"
 ENDTRNS
 TRNS	"1/23/2017"	"Paypal"		House	-1,241.79	"Transfer to bank account"
-SPL	"1/23/2017"	"Checking"		House	1,241.79	"Transfer to bank account"
+SPL	"1/23/2017"	"Reading Checking"		House	1,241.79	"Transfer to bank account"
 ENDTRNS

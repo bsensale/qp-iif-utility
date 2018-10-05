@@ -20,7 +20,7 @@ package net.sensale.qp.quickbooks;
  *
  */
 public enum QBClass {
-    HOUSE, SHOW, WEB_PAYMENT, DONATION, FUNDRAISER ;
+    HOUSE, SHOW, WEB_PAYMENT, DONATION, FUNDRAISER, TRANSFER ;
 
     /**
      * @return A user friendly version of the Class.
@@ -33,6 +33,9 @@ public enum QBClass {
         }
         if(result.equals(DONATION.name())) {
             return "\"Donation Payment\"";
+        }
+        if(result.equals(TRANSFER.name())) {
+        	result = HOUSE.name();
         }
         return result.substring(0, 1) + result.substring(1, result.length()).toLowerCase();
     }

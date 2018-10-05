@@ -53,6 +53,7 @@ public class SimpleIntegrationTest {
         results.add(new String[] { "/seasub" });
         results.add(new String[] { "/paymentComplete" });
         results.add(new String[] { "/mixed" });
+        results.add(new String[] { "/newReport" });
         return results;
     }
 

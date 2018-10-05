@@ -24,7 +24,7 @@ import java.text.NumberFormat;
 public class Amount extends QBObject<Double> {
 
     public Amount(String pValue) {
-        mValue = Double.parseDouble(pValue);
+        mValue = Double.parseDouble(pValue.replaceAll(",", ""));
     }
     
     public Amount(Double pValue) {

@@ -122,7 +122,10 @@ public class Transaction {
      */
     public Account getAccount(String pCurrentValue) {
         String value = StringUtils.stripQuotes(pCurrentValue);
-        if ("Other Expenses".equals(value)) {
+        if(mClass == QBClass.TRANSFER) {
+        	return Account.CHECKING;
+        }
+        if ("Other Expenses".equalsIgnoreCase(value)) {
             return Account.PAYPAL_EXPENSE;
         } else
             return mAccount;
@@ -137,15 +140,24 @@ public class Transaction {
         String[] columns = pTransLine.split("\t");
         if (columns.length < 6) {
             throw new IllegalArgumentException(
-                    "Couldn't split TRNS line into more than 6 columns by tabs, found: "
+                    "Couldn't split TRNS line into at least 6 columns by tabs, found: "
                             + columns.length + " " + pTransLine);
         }
         if (!"TRNS".equals(columns[0])) {
             throw new IllegalArgumentException("Line didn't start with TRNS: " + pTransLine);
         }
         QBClass headerClass = parseClassAndDetectDonation(columns[4]);
-        String memo = parseMemo(columns[6], columns[3]);
-        
+        if(headerClass != QBClass.TRANSFER && columns.length < 7) {
+        	throw new IllegalArgumentException(
+        			"TRNS line was missing the memo field, but this wasn't a transfer");
+        }
+        String memo;
+        if(headerClass == QBClass.TRANSFER) {
+        	memo = "Transfer to bank account";
+        }
+        else {	
+        	memo = parseMemo(columns[6], columns[3]);
+        }
         mTransLine = new TransactionLine(new Date(columns[1]), // columns[1] = "10/1/2009"
                 Account.PAYPAL,                                // columns[2] = "Paypal", always use Paypal
                 new Name(columns[3]),                          // columns[3] = "Person Lastname"
@@ -170,6 +182,10 @@ public class Transaction {
         else if (input.equals("Donation Payment")) {
             mClass = QBClass.DONATION;
             return QBClass.DONATION;
+        }
+        else if (input.equals("General Withdrawal")) {
+        	mClass = QBClass.TRANSFER;
+        	return QBClass.TRANSFER;
         }
         else if ("Payment Completed".equals(input)) {
             throw new PaymentCompletedClassException(

@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package net.sensale.qp.quickbooks;
 
 /**
@@ -24,7 +25,8 @@ public enum Account {
     SEA_SUB("Season Subscription"),
     PAYPAL_EXPENSE("Paypal Expense"),
     DONATIONS("Donations"),
-    OTHER_INCOME("Other Income");
+    OTHER_INCOME("Other Income"),
+    CHECKING ("Reading Checking");
     
     String mDisplayName;
     Account(String pValue) {

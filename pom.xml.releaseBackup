@@ -2,12 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.sensale</groupId>
   <artifactId>qp-iif-utility</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <scm>
     <url>https://github.com/bsensale/qp-iif-utility</url>
     <connection>scm:git:git://github.com:bsensale/qp-iif-utility.git</connection>
     <developerConnection>scm:git:git@github.com:bsensale/qp-iif-utility.git</developerConnection>
-    <tag>HEAD</tag>
   </scm>
 
   <properties>

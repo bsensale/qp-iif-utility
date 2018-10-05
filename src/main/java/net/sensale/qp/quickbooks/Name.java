@@ -22,9 +22,9 @@ package net.sensale.qp.quickbooks;
 public class Name extends QBObject<String> {
 
     public Name(String pValue) {
-        if(pValue == null || pValue.equals("")) {
-            throw new IllegalArgumentException("Name field cannot be null");
-        }
+//        if(pValue == null) {
+//            throw new IllegalArgumentException("Name field cannot be null");
+//        }
         mValue = StringUtils.stripQuotes(pValue);
     }
 }
